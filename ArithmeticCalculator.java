@@ -13,7 +13,7 @@ class ArithmeticCalculator {
         System.out.print("Enter the second number: ");
         double num2 = Double.parseDouble(scanner.nextLine());
 
-        double result;
+        double result = 0.0;
         switch(operator) {
             case "+":
                 result = num1 + num2;
@@ -28,6 +28,14 @@ class ArithmeticCalculator {
             case "÷":
                 result = num1 / num2;
                 break;
+            case "%":
+                result = num1 % num2;
+                break;
+            default:
+                System.out.println("Can't understand " + operator + " operator \nSupported operators: +, -, *, /, %");
+                System.exit(1);
         }
+
+        System.out.println("Result of " + num1 + " " + operator + " " + num2 + " is " + result);
     }
 }
