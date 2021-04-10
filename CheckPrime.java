@@ -9,7 +9,8 @@ public class CheckPrime {
         if (num <= 0) {
             System.out.println("Number should be positive & greater than zero");
             System.exit(1);
-        } else if(num == 1) {
+        } 
+        if (num == 1) {
             System.out.println("Neither prime nor composite" );
             return;
         }
