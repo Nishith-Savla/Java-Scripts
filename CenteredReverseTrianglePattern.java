@@ -4,6 +4,7 @@ class CenteredReverseTrianglePattern {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of lines: ");
         short row, number, space, lines = Short.parseShort(scanner.nextLine());
 
         for(row=lines; row > 0; --row) {

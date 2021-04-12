@@ -17,7 +17,7 @@ public class CheckPrime {
         boolean isNotPrime = false;
         for (int i = 2; i < Math.sqrt(num); ++i) {
             if(num % i == 0) {
-                System.out.println("NOT a Prime number (is divisible by " + i + ")");
+                System.out.println(num + " is NOT a Prime number (is divisible by " + i + ")");
                 isNotPrime = true;
                 break;
             }
