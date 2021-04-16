@@ -29,8 +29,11 @@ public class PasswordManager {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a password: ");
         PasswordManager passwordManager = new PasswordManager(scanner.nextLine());
+
         System.out.print("Do you want to change the password(y/n): ");
+
         boolean wannaChangePassword = scanner.nextLine().toLowerCase().startsWith("y");
+
         if (wannaChangePassword) {
             System.out.print("Enter your current password: ");
             String currentPassword = scanner.nextLine();
@@ -38,7 +41,6 @@ public class PasswordManager {
             String newPassword = scanner.nextLine();
 
             boolean passwordChangeSucceed = passwordManager.changePassword(currentPassword, newPassword);
-
             String message = passwordChangeSucceed ? "Password changed successfully" : "Incorrect Password";
             System.out.print('\n' + message);
 
